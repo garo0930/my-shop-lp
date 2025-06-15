@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>買取おたから屋</title>
 
-    <!-- Noto Sans JP フォント -->
+    <!-- フォント -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet" />
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -26,7 +26,6 @@
         },
       };
     </script>
-
     <style>
       body {
         font-family: "Noto Sans JP", sans-serif;
@@ -37,22 +36,43 @@
   <body class="bg-white text-gray-800">
     <!-- Header -->
     <header class="bg-primary text-white sticky top-0 z-50 shadow">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- ✅ ロゴ画像サイズ修正済み -->
         <div class="flex items-center space-x-3">
-          <img src="logo.png" alt="ロゴ" class=""h-12 w-20" />
-          <span class="text-xl font-bold">買取おたから屋</span>
+          <img src="logo.png" alt="買取おたから屋ロゴ" class="h-12 w-auto" />
+          <div class="hidden md:block text-sm leading-tight">
+            <p>全国1300店舗以上展開中！</p>
+            <p>信頼と実績の買取専門店「買取おたから屋」</p>
+          </div>
         </div>
-        <div class="hidden md:flex space-x-6 text-sm">
-          <a href="#top" class="hover:text-gold">ホーム</a>
-          <a href="#service" class="hover:text-gold">買取品目</a>
-          <a href="#access" class="hover:text-gold">店舗情報</a>
+
+        <!-- 電話番号表示 -->
+        <div class="text-right text-sm sm:text-base space-y-1 hidden sm:block">
+          <p>
+            📞 <a href="tel:0312345678" class="underline text-white hover:text-gray-200 text-lg font-bold">03-1234-5678</a>
+          </p>
+          <p class="text-xs">【受付】24時間 年中無休（年末年始除く）</p>
         </div>
       </div>
+
+      <!-- ナビメニュー -->
+      <nav class="bg-white text-primary text-sm font-medium px-4 py-2">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-start space-x-4">
+          <a href="#top" class="hover:underline">TOP</a>
+          <a href="#first" class="hover:underline">初めての方へ</a>
+          <a href="#howto" class="hover:underline">買取方法</a>
+          <a href="#items" class="hover:underline">買取品目</a>
+          <a href="#brands" class="hover:underline">買取ブランド</a>
+          <a href="#price" class="hover:underline">参考価格</a>
+          <a href="#access" class="hover:underline">店舗紹介</a>
+          <a href="#faq" class="hover:underline">よくある質問</a>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero -->
     <section id="top" class="relative">
-      <img src="/shop-image.jpg" alt="店舗イメージ" class="w-full h-64 md:h-96 object-cover" />
+      <img src="shop-image.jpg" alt="店舗イメージ" class="w-full h-64 md:h-96 object-cover" />
       <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <h1 class="text-white text-3xl md:text-5xl font-serif text-center px-4">
           安心・無料の<br class="md:hidden" />地域密着型買取店
@@ -60,7 +80,7 @@
       </div>
     </section>
 
-    <!-- Service -->
+    <!-- 選ばれる理由 -->
     <section id="service" class="max-w-5xl mx-auto px-4 py-12">
       <h2 class="text-2xl font-bold text-primary mb-6">選ばれる理由</h2>
       <div class="grid md:grid-cols-3 gap-6 text-center text-sm">
@@ -79,7 +99,7 @@
       </div>
     </section>
 
-    <!-- Access -->
+    <!-- 店舗情報 -->
     <section id="access" class="bg-gray-100 py-10">
       <div class="max-w-5xl mx-auto px-4">
         <h2 class="text-2xl font-bold text-primary mb-4">店舗情報</h2>
@@ -89,7 +109,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- フッター -->
     <footer class="bg-primary text-white text-sm text-center py-6">
       <p>📍 東京都渋谷区神南1-1-1 | 📞 <a href="tel:0312345678" class="underline">03-1234-5678</a></p>
       <p class="mt-2">&copy; 2025 買取おたから屋 All Rights Reserved.</p>
