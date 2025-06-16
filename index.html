@@ -1,125 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>買取大吉桜井安倍木材団地店</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>買取大吉 桜井安倍木材団地店</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Noto Sans JP"', 'sans-serif'],
-            serif: ['"Noto Serif JP"', 'serif'],
-          },
-          colors: {
-            primary: '#100169',
-            gold: '#d4af37',
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Noto Sans JP"', 'sans-serif'],
+            },
+            colors: {
+              primary: '#100169', // ブランドカラー（紺）
+              gold: '#d4af37',
+            },
           },
         },
-      },
-    };
-  </script>
-  <style>
-    body {
-      font-family: "Noto Sans JP", sans-serif;
-    }
-  </style>
-</head>
+      }
+    </script>
+    <style>
+      body {
+        font-family: "Noto Sans JP", sans-serif;
+      }
+    </style>
+  </head>
 
-<body class="bg-white text-gray-800">
-  <!-- Header（反転済） -->
-  <header class="bg-white text-primary sticky top-0 z-50 shadow">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="logo.png" alt="買取大吉ロゴ" class="h-10 max-w-[180px] w-auto" />
-        <div class="hidden md:block text-sm leading-tight">
-          <p class="text-primary">全国1400店舗以上展開中！</p>
-          <p class="text-primary font-bold">信頼と実績の買取専門店「買取大吉」</p>
+  <body class="bg-white text-black">
+    <!-- ヘッダー：白背景＋紺文字 -->
+    <header class="bg-white text-primary sticky top-0 z-50 shadow">
+      <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center h-[60px]">
+        <div class="flex items-center space-x-3">
+          <img src="logo.png" alt="買取大吉ロゴ" class="h-10 w-auto" />
+          <span class="text-base md:text-lg font-bold hidden sm:inline-block">
+            買取大吉 桜井安倍木材団地店
+          </span>
+        </div>
+
+        <div class="text-right text-sm sm:text-base leading-tight">
+          <p class="text-lg font-bold text-primary">
+            📞 <a href="tel:07024498957" class="underline hover:text-gold">070-2449-8957</a>
+          </p>
+          <p class="text-xs text-gray-700">受付時間：10:00〜19:00（水曜定休）</p>
         </div>
       </div>
-      <div class="text-right text-sm sm:text-base">
-        <p class="text-lg font-bold">
-          📞 <a href="tel:07024498957" class="text-primary underline hover:text-gold">070-2449-8957</a>
-        </p>
-        <p class="text-xs text-gray-700">受付時間：10:00～19:00（水曜定休）</p>
-      </div>
-    </div>
 
-    <nav class="bg-gray-100 text-primary text-sm font-medium px-4 py-2 border-t border-gray-200">
-      <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-start space-x-4">
-        <a href="#top" class="hover:underline">TOP</a>
-        <a href="#first" class="hover:underline">初めての方へ</a>
-        <a href="#howto" class="hover:underline">買取方法</a>
-        <a href="#items" class="hover:underline">買取品目</a>
-        <a href="#brands" class="hover:underline">買取ブランド</a>
-        <a href="#price" class="hover:underline">参考価格</a>
-        <a href="#access" class="hover:underline">店舗紹介</a>
-        <a href="#faq" class="hover:underline">よくある質問</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section id="top" class="relative">
-    <img src="shop-image.jpg" alt="店舗イメージ" class="w-full h-64 md:h-96 object-cover" />
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <h1 class="text-white text-3xl md:text-5xl font-serif text-center px-4">
-        安心・無料の<br class="md:hidden" />地域密着型買取店
-      </h1>
-    </div>
-  </section>
-
-  <!-- 選ばれる理由 -->
-  <section id="service" class="max-w-5xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold text-primary mb-6">選ばれる理由</h2>
-    <div class="grid md:grid-cols-3 gap-6 text-center text-sm">
-      <div class="p-4 border rounded shadow hover:shadow-lg">
-        <p class="text-lg font-semibold text-gold">査定無料</p>
-        <p>すべての査定が無料。お気軽にご相談ください。</p>
-      </div>
-      <div class="p-4 border rounded shadow hover:shadow-lg">
-        <p class="text-lg font-semibold text-gold">即日現金化</p>
-        <p>その場ですぐに現金お渡し可能。</p>
-      </div>
-      <div class="p-4 border rounded shadow hover:shadow-lg">
-        <p class="text-lg font-semibold text-gold">出張買取OK</p>
-        <p>ご自宅まで伺います。遠方の方も対応可能。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 店舗情報 -->
-  <section id="access" class="bg-gray-100 py-10">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-primary mb-4">店舗情報</h2>
-      <p class="mb-2">📍 奈良県桜井市安倍木材団地2丁目4-20-2</p>
-      <p class="mb-2">📞 <a href="tel:07024498957" class="text-blue-600 underline">070-2449-8957</a></p>
-      <p class="mb-2">🕒 営業時間：10:00〜19:00（水曜日定休）</p>
-
-      <!-- Google Map埋め込み（正しい店舗位置） -->
-      <div class="mt-6">
-        <div class="relative w-full" style="padding-top: 56.25%;">
-          <iframe
-            class="absolute top-0 left-0 w-full h-full rounded shadow"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.939064343553!2d135.8375262768015!3d34.50201427293461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6006cb93f1906f77%3A0x481552169400a0fb!2z5pel5pys5aSn5a2mIOWbvueUuuOBruOBq-Wkp-WcqOa0uOeQhueWgA!5e0!3m2!1sja!2sjp!4v1718472752871!5m2!1sja!2sjp"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+      <!-- ナビゲーション（白背景＋黒文字） -->
+      <nav class="bg-white text-black text-sm font-medium px-4 py-2 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-center sm:justify-start space-x-4">
+          <a href="#top" class="hover:underline">TOP</a>
+          <a href="#first" class="hover:underline">初めての方へ</a>
+          <a href="#howto" class="hover:underline">買取方法</a>
+          <a href="#items" class="hover:underline">買取品目</a>
+          <a href="#brands" class="hover:underline">買取ブランド</a>
+          <a href="#price" class="hover:underline">参考価格</a>
+          <a href="#access" class="hover:underline">店舗紹介</a>
+          <a href="#faq" class="hover:underline">よくある質問</a>
         </div>
-      </div>
-    </div>
-  </section>
+      </nav>
+    </header>
 
-  <!-- フッター -->
-  <footer class="bg-primary text-white text-sm text-center py-6">
-    <p>📍 奈良県桜井市安倍木材団地2丁目4-20-2 | 📞 <a href="tel:07024498957" class="underline">070-2449-8957</a></p>
-    <p class="mt-2">&copy; 2025 買取大吉桜井安倍木材団地店 All Rights Reserved.</p>
-  </footer>
-</body>
+    <!-- 以下のセクションはご自由に拡張してください -->
+    <main>
+      <section id="top" class="text-center py-10">
+        <h1 class="text-2xl font-bold text-primary">地域密着の買取専門店へようこそ</h1>
+        <p class="mt-2">初めての方も安心、査定無料・即現金化対応</p>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-white text-sm text-center py-6 border-t border-gray-300">
+      <p class="text-primary font-bold">📞 <a href="tel:07024498957" class="underline hover:text-gold">070-2449-8957</a></p>
+      <p class="text-black">奈良県桜井市安倍木材団地2丁目4-20-2</p>
+      <p class="mt-2 text-gray-600">&copy; 2025 買取大吉桜井安倍木材団地店 All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>
