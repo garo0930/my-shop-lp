@@ -24,6 +24,10 @@
       },
     };
   </script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <style>
     body {
       font-family: "Noto Sans JP", sans-serif;
@@ -39,7 +43,7 @@
       <div class="flex items-center space-x-4 w-full sm:w-auto">
         <img src="logo.png" alt="ロゴ" class="h-14 sm:h-16 w-auto" />
         <div class="text-xs leading-tight text-gray-700 hidden sm:block">
-          <p class="font-semibold">全国1300店舗以上展開中！</p>
+          <p class="font-semibold">全国1400店舗以上展開中！</p>
           <p>信頼と実績の買取専門店「買取大吉」</p>
         </div>
       </div>
@@ -49,9 +53,9 @@
         <div class="leading-tight">
           <p class="text-xl font-bold text-primary flex items-center justify-center sm:justify-end">
             <span class="mr-1 text-lg">☎</span>
-            <a href="tel:0120151234" class="hover:text-gold">0120-15-1234</a>
+            <a href="tel:07024498957" class="hover:text-gold">070-2449-8957</a>
           </p>
-          <p class="text-xs text-gray-600">【総合受付】24時間・年中無休（年末年始除く）</p>
+          <p class="text-xs text-gray-600">【受付】10:00～19:00（水曜日定休）</p>
         </div>
         <a href="#contact" class="bg-daikichiPink text-white text-sm px-4 py-2 font-bold hover:opacity-90 whitespace-nowrap">
           お問い合わせ
@@ -74,13 +78,36 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- フェード式バナー -->
   <section id="top" class="relative">
-    <img src="shop-image.jpg" alt="店舗イメージ" class="w-full h-64 md:h-96 object-cover" />
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <h1 class="text-white text-3xl md:text-5xl font-serif text-center px-4">
-        安心・無料の<br class="md:hidden" />地域密着型買取店
-      </h1>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- スライド1 -->
+        <div class="swiper-slide relative">
+          <img src="banner1.jpg" alt="バナー1" class="w-full h-64 md:h-[500px] object-cover" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <h2 class="text-white text-base md:text-3xl font-serif text-center px-4 leading-relaxed">
+              一点一点丁寧に無料で査定！<br />
+              金、プラチナ、ダイヤモンド、ブランド品、古銭、切手買取りのことなら、お任せください!
+            </h2>
+          </div>
+        </div>
+        <!-- スライド2 -->
+        <div class="swiper-slide relative">
+          <img src="banner2.jpg" alt="バナー2" class="w-full h-64 md:h-[500px] object-cover" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <h2 class="text-white text-base md:text-3xl font-serif text-center px-4 leading-relaxed">
+              一点一点丁寧に無料で査定！<br />
+              金、プラチナ、ダイヤモンド、ブランド品、古銭、切手買取りのことなら、お任せください!
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- ナビゲーション -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
 
@@ -111,7 +138,7 @@
       <p class="mb-2">📞 <a href="tel:07024498957" class="text-blue-600 underline">070-2449-8957</a></p>
       <p class="mb-2">🕒 営業時間：10:00〜19:00（水曜日定休）</p>
 
-      <!-- Google Map埋め込み（正しい店舗位置） -->
+      <!-- Google Map -->
       <div class="mt-6">
         <div class="relative w-full" style="padding-top: 56.25%;">
           <iframe
@@ -132,5 +159,29 @@
     <p>📍 奈良県桜井市安倍木材団地2丁目4-20-2 | 📞 <a href="tel:07024498957" class="underline">070-2449-8957</a></p>
     <p class="mt-2">&copy; 2025 買取大吉桜井安倍木材団地店 All Rights Reserved.</p>
   </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>
